@@ -93,11 +93,11 @@ public class Pokemon {
         this.typespokemon = typespokemon;
     }
 
-    public String types(){
-        String tiposPokeom = null;
-
-        for(int i = 0; i >= typespokemon.size();i++){
-            tiposPokeom += typespokemon.get(i);
+    public String types() {
+        String tiposPokeom = new String();
+        for (String pokemontypes : typespokemon) {
+            String virgula = " ";
+            tiposPokeom += pokemontypes.concat(virgula);
         }
         return tiposPokeom;
     }
@@ -112,7 +112,7 @@ public class Pokemon {
                 ", height=" + height +
                 ", weight=" + weight +
                 ", species='" + species + '\'' +
-                ", typespokemon=" + typespokemon +
+                ", typespokemon=" + types() +
                 '}';
     }
 }

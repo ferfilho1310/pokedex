@@ -23,8 +23,6 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-import retrofit2.http.POST;
-
 public class AdapterPokemon extends RecyclerView.Adapter<AdapterPokemon.ViewHolderPokemon> implements Filterable {
 
     List<Pokemon> dataset;
@@ -49,7 +47,7 @@ public class AdapterPokemon extends RecyclerView.Adapter<AdapterPokemon.ViewHold
         Pokemon pokemon = dataset.get(position);
         holder.txt_pokemon.setText(pokemon.getName().toUpperCase());
         holder.txt_descricao.setText(pokemon.getDescription());
-        holder.txt_types.setText(pokemon.types());
+        holder.txt_types.setText(pokemon.types().toUpperCase());
 
         Log.i("TAG", "tipos de pokekon" + pokemon.getTypespokemon());
 
